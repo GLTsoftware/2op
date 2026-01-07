@@ -64,7 +64,7 @@ int main(int argc, char **argv) {
     time_t now = time(NULL);
     struct tm *tm_info = localtime(&now);
     char timestamp[20];
-    strftime(timestamp, sizeof(timestamp), "%a %H:%M:%S", tm_info);
+    strftime(timestamp, sizeof(timestamp), "%Y-%m-%d %H:%M:%S", tm_info);
 
     // Format the complete message with timestamp and username
     char formatted_message[256];
