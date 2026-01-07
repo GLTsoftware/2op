@@ -101,7 +101,6 @@ int main(int argc, char **argv) {
     }
 
     // Free resources
-    printf("Message added successfully: %s\n", formatted_message);
     freeReplyObject(reply);
     redisFree(c);
 
