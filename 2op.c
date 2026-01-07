@@ -48,13 +48,13 @@ int main(int argc, char **argv) {
         if (i < argc - 1) total_length++; // Count space between arguments
     }
 
-    if (total_length >= 80) {
-        fprintf(stderr, "Error: Message too long. Must be less than 80 characters.\n");
+    if (total_length >= 500) {
+        fprintf(stderr, "Error: Message too long. Must be less than 500 characters.\n");
         return EXIT_FAILURE;
     }
 
     // Concatenate all message arguments into one string
-    char message[80] = {0};
+    char message[500] = {0};
     for (int i = optind; i < argc; i++) {
         strcat(message, argv[i]);
         if (i < argc - 1) strcat(message, " ");
